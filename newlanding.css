@@ -1,0 +1,382 @@
+body {
+    margin: 0;
+    color: white;
+    background: black;
+    font-family: Arial;
+}
+a {
+    color: white;
+}
+#header {
+    position: fixed;
+    background-color: #f11111;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
+
+/* Area before the map has a nice background*/
+#first {
+    width: 100%;
+    height: 1000px;
+    background-image: url('../img/newbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Breaking areas between sections */
+.breakblue {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-color: #5e97ab;
+}
+.breakorange {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-color: orange;
+}
+
+/* Needed to center some small elements */
+.centerblock {
+width:100px;
+text-align:center;
+margin:0 auto;
+}
+.centered {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    margin-top: -50px;
+    margin-left: -230px;
+}
+.welcome {
+    cursor: pointer;
+    width: 600px;
+    text-align: center;
+    height: 100px;
+    font-size: 30px;
+    font-family: Tamoha;
+    color: #fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #bbb;
+}
+
+/* We don't want the welcome words visible initially */
+#faded,
+#faded2 {
+    font-size: 26px;
+    display: none;
+}
+input[type=text] {
+    height: 25px;
+    width: 500px;
+}
+#can {
+    background: #68c0e6;
+    width: 1000px;
+    float: left;
+    padding: 0px;
+}
+#leftside {
+    background-color: #5e97ab;
+    text-align: center;
+    width: 350px;
+    height: 604px;
+    float: left;
+}
+
+/* Map area */
+#second {
+    width: 100%;
+    height: 1000px;
+    background: #ccc;
+    background-image: url('../img/tiled.jpg');
+}
+
+/* Travel guides */
+#third {
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+    height: 600px;
+    color: black;
+}
+#newcontainer {
+    margin: 0 auto;
+    width: 1400px;
+}
+.slidercontainer {
+    margin: 0 auto;
+    width: 900px;
+    height: 300px;
+}
+
+/* Various map sidebar divs */
+#pname {
+    color: white;
+    font-size: 24px;
+}
+#pimage {
+    height: 150px;
+}
+#pdesc {
+    margin: 0 auto;
+    width: 300px;
+    color: white;
+    height: 200px;
+}
+#plink {
+    background-color: #378;
+    opacity: 1.0;
+    border-radius: 10px;
+    width: 170px;
+    height: 20px;
+    margin: 0 auto;
+    color: white;
+    padding: 20px;
+}
+.skip {
+    background-color: #fff;
+    padding: 6px;
+    font-weight: bold;
+    border: 3px solid black;
+}
+.skip:hover {
+    cursor: pointer;
+    background-color: #ff0;
+    padding: 6px;
+    font-weight: bold;
+    border: 3px solid black;
+}
+.spacing {
+    float: left;
+    margin-right: 15px;
+}
+.rad {
+    position: relative;
+    top: 37px;
+    color: black;
+    float: left;
+    width: 10%;
+    font-weight: bold
+}
+.searcher {
+    color: black;
+}
+
+/* The about pop-up shouldn't be visible until we ask it to be */
+#aboutdarken {
+    display: none;
+    opacity: 0.4;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+#about {
+    display: none;
+    border: 10px solid #420;
+    background-color: white;
+    position: fixed;
+    width: 680px;
+    height: 680px;
+    top: 50%;
+    left: 50%;
+    margin-left: -340px;
+    margin-top: -340px;
+    color: black;
+    font-size: 20px;
+}
+.abouthead {
+    padding-top: 20px;
+    float: left;
+    width: 360px;
+    text-align: center;
+    font-size: 30px;
+}
+.aboutleftpic,
+.aboutrightpic {
+    float: left;
+    width: 160px;
+}
+.abouttext {
+    padding: 50px;
+}
+.aboutsig {
+    float: left;
+    width: 200px;
+    height: 50px;
+}
+.aboutgap {
+    float: left;
+    width: 100px;
+    height: 50px;
+}
+#defaultimg {
+    width: 75%;
+}
+
+/* Shiny */
+#sun {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 1000px;
+    left: 280px;
+}
+
+/* we use cover for the flash after the sun rises */
+#cover {
+    z-index: -1000;
+    opacity: 0.0;
+    position: absolute;
+    top: 0px;
+    background: white;
+    width: 100%;
+    height: 1000px;
+}
+.guidehead {
+    font-size: 40px;
+    font-family: Tamoha;
+}
+.line {
+    margin: 0 auto;
+    background-color: black;
+    height: 2px;
+    width: 60%;
+}
+
+/* Various searchbar divs including the pop-under content */
+#searchbar {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+}
+#scon {
+    width: 500px;
+    margin: 0 auto;
+}
+#searchpop {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: left;
+    color: blue;
+}
+.highlight {
+    background-color: #ddd;
+    color: black;
+    width: 100%;
+}
+.normal {
+    background-color: #fff;
+    color: black;
+    width: 100%;
+}
+.leftarrow {
+    float: left;
+    width: 75px;
+    height: 300px;
+    line-height: 110px;
+}
+.rightarrow {
+    float: left;
+    width: 75px;
+    height: 300px;
+    line-height: 110px;
+}
+#mySlider {
+    float: left;
+}
+
+/* Handy for making things look obvious that they're clickable */
+.clickable {
+    cursor: pointer;
+}
+
+/* We use these two for the travel guides that pop up when we click on them */
+#sliderdarken {
+    z-index: -999;
+    display: none;
+    opacity: 0.6;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+#sliderpop {
+    z-index: -998;
+    display: none;
+    border: 10px solid #420;
+    background-color: white;
+    position: fixed;
+    width: 980px;
+    height: 780px;
+    top: 50%;
+    left: 50%;
+    margin-left: -490px;
+    margin-top: -390px;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+}
+.logoleft {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.guidecontent {
+    padding: 20px;
+}
+
+/* Responsiveness in the navbar, and a couple of other divs */
+@media (max-width: 800px) {
+    .link1,
+    .topbar,
+    .linksbar {
+        width: 100%;
+        height: 30px;
+        padding: 4px;
+        font-size: 20px;
+        border-bottom: 1px solid black;
+    }
+    .logoleft {
+        height: 60px;
+        width: 100%;
+        float: left;
+        padding-bottom: 20px;
+    }
+    .linksbar {
+        position: static;
+    }
+    .topbar {
+        display: none;
+    }
+    #can {
+        clear: both;
+    }
+    #second {
+        height: 100%;
+    }
+    .leftarrow,
+    .rightarrow {
+        width: 30px;
+    }
+    #sliderpop {
+        width: 650px;
+        height: 1200px;
+        top: 10px;
+        left: 10px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>New Horizons - Activities</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" >
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="navbar">
+  		<div class="logoleft"><img src="img/new_horizons_logo.png" width="240" height="50" alt=""/></div>
+  	  <div class="topbar"></div>
+  		<div class="linksbar">
+        <div class='link1' onclick='location.href="index.html"'>Home</div>
+  			<div class='link1' onclick='showabout()'>About</div>
+  			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
+  			<div class='link1' onclick='location.href="store.html"'>Shop</div>
+  		</div>
+  	</div>
+      <div id="main-body">
+        <div id="breadcrumb-container">
+          <ul id="breadcrumb-list">
+            <li class="breadcrumb"><a href="index.html" class="breadcrumb-link">Home</a><span>&gt;&gt;</span></li>
+            <li class="breadcrumb"><a href="activities.html" class="breadcrumb-link current">Activities</a></li>
+          </ul>
+        </div>
+
+      <div id="slider">
+          <div id="container">
+            <div class="container-overlay">
+            <h2>Activities</h2>
+          </div>
+            <div class="slide-div" id="item-1">
+              <p>Experience something <span id="greentext">new</span></p>
+
+            </div>
+            <div class="slide-div green" id="item-2">
+              <p>“The core of mans' spirit comes from new <span id="orangetext">experiences</span>.”
+                <br>― Christopher McCandless </p>
+            </div>
+          </div>
+          <div id="slider-controls">
+            <ol>
+              <li id="slide-1" class="fa fa-dot-circle-o"></li>
+              <li id="slide-2" class="fa fa-circle-o"></li>
+            </ol>
+          </div>
+      </div>
+      <div id="grey-box-form">
+        <div id="form-box">
+          <form>
+              <div class="form-item">
+                <label for="destination-box">Destination</label>
+                <select name="destination-box">
+                  <option id="australia" value="australia">Australia</option>
+                  <option id="france" value="france">France</option>
+                  <option id="iceland" value="iceland">Iceland</option>
+                  <option id="mexico" value="mexico">Mexico</option>
+                  <option id="nepal" value="nepal">Nepal</option>
+                  <option id="new-zealand" value="new-zealand">New Zealand</option>
+                  <option id="turkey" value="turkey">Turkey</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="arrival-box">Arrival</label>
+                <input type="text" name="arrival-box" class="date-box-size" id="arrive-time">
+              </div>
+              <div class="form-item">
+                <label for="departure-box">Departure</label>
+                <input type="text" name="departure-box" class="date-box-size" id="depart-time">
+              </div>
+              <div class="form-item">
+                <label for="number-of-guests">Persons</label>
+                <input type="number" name="number-of-guests" id="number-of-guests-box-size" min="1">
+              </div>
+              <div class="form-item">
+                <label for="category">Category</label>
+                <select name="category">
+                  <option value="default">--Choose Category--</option>
+                  <option value="snowsports">Snowsports</option>
+                  <option value="hiking">Hiking</option>
+                  <option value="offroading">Offroading</option>
+                  <option value="biking">Biking</option>
+                  <option value="watersports">Watersports</option>
+                </select>
+              </div>
+              <div id="form-button">
+                <button id="search-button" type="button">Search</button>
+              </div>
+          </form>
+        </div>
+      </div>
+      <div id="activity-heading">
+      <h2>What kind of activity would you like to do?</h2>
+      </div>
+      <div id="activity-container">
+        <div class="activity-individual-box" id="snow-box">
+          <img src="./img/activities/skiing.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="snowsports">
+            <span class="activity-text" >
+              Snowsports
+            </span>
+          </div>
+        </div>
+        <div class="activity-individual-box" id="hike-box">
+          <img src="./img/activities/travelling-alone.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="hiking">
+            <span class="activity-text">
+              Hiking
+            </span>
+          </div>
+        </div>
+        <div class="activity-individual-box" id="off-box">
+          <img src="./img/activities/offroading.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="offroading">
+            <span class="activity-text">
+              Offroading
+            </span>
+          </div>
+        </div>
+        <div class="activity-individual-box double-wide-individual-box" id="water-box">
+          <img src="./img/activities/scubadiving.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="watersports">
+            <span class="activity-text">
+              Watersports
+            </span>
+          </div>
+        </div>
+        <div class="activity-individual-box" id="bike-box">
+          <img src="./img/activities/biking.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="biking">
+            <span class="activity-text">
+              Biking
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="reciept-border">
+        <div id="receipt" class="jaggededges">
+          <h2>Price Breakdown</h2>
+          <table>
+            <tr>
+              <th>Activities  <span id="delete-activity" class="fa fa-times hidden"></span></th>
+              <td  id="activity-price">0</td>
+            </tr>
+            <tr class="table-colour2">
+              <th>Accommodation <span id="delete-accommodation"class="fa fa-times hidden"></span></th>
+              <td id="accommodation-price">0</td>
+            </tr>
+            <tr>
+              <th>Vaccinations <span id="delete-vaccinations" class="fa fa-times hidden"></span></th>
+              <td id="vaccination-price">0</td>
+            </tr>
+            <tr class="table-colour2">
+              <th>Shop <span id="delete-shop" class="fa fa-times hidden"></span></th>
+              <td id="shop-price">0</td>
+            </tr>
+          </table>
+          <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>
+        </div>
+        <input id="checkout-button" type="button" onclick="window.location='./basket.html';" value="Checkout">
+      </div>
+      <div id="skip-button">
+        <input type="button" onclick="window.location='./accommodation.html';" value="Skip this step">
+      </div>
+    </div>
+    <footer id="footer">
+      &copy; New horizons 2016
+    </footer>
+    <div id='aboutdarken' onclick='hideabout()'>
+    </div>
+    <div id='about' onclick='hideabout()'>
+    <div class='aboutleftpic'><img src='img/flowerleft.jpg' width="160px"></div>
+    <div class='abouthead'>About Us</div>
+    <div class='aboutrightpic'><img src='img/flowerright.jpg' width="160px"></div>
+    <div class='abouttext'>
+    <br>
+    Welcome to New Horizons! Founded in 2016, we're a young company, dedicated to offering a place where adventurous souls can find just what they need for their trip away.
+    Whether you're scuba diving in the great barrier reef, making the climb at Croagh Patrick, or camping in Yosemite, we have just what you need at our store.<br><br>
+    If you're unsure what you want to do when away, check our local accommodaton and activity pages to get you started on your next big adventure. Some locations will require vaccinations before you travel. We'll set you on the right path.
+    We're keen to provide a friendly and professional service, and we hope you enjoy the time you spend at our site!
+    </div><br><br>
+    <center>
+    <img src='img/campsite.jpg' width='500px'>
+    <br>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://code.jquery.com/color/jquery.color-2.1.2.min.js'></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/scriptlanding.js"></script>
+    <script src="./js/cookies.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
